@@ -17,11 +17,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         viewmodel.name.observe(this) {
-            binding.etUserName.setText(it.toString())
+            binding.tvName.text = it.toString()
         }
 
         viewmodel.age.observe(this) {
-            binding.etUserAge.setText(it.toString())
+            binding.tvAge.text = it.toString()
         }
 
         binding.btnSaveData.setOnClickListener {
